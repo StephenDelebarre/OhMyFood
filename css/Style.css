@@ -1,0 +1,255 @@
+.location {
+  display: flex;
+  height: auto;
+  background-color: #ededed;
+  justify-content: center;
+}
+.location i {
+  margin: 28px 180px auto auto;
+  position: absolute;
+}
+.location p {
+  font-size: 1.2rem;
+  color: #4d4d4d;
+}
+
+.explore {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 5%;
+  height: auto;
+}
+.explore h1 {
+  font-size: 2rem;
+  padding: 0 5%;
+}
+.explore p {
+  padding: 0 5%;
+  font-size: 1.3rem;
+  opacity: 50%;
+}
+
+.working {
+  padding: 5%;
+}
+
+.restaurants {
+  padding: 5%;
+  background-color: whitesmoke;
+  height: auto;
+  padding-bottom: 10%;
+}
+
+.img_palette {
+  position: relative;
+}
+.img_palette img {
+  position: relative;
+  width: 100%;
+}
+
+.palette {
+  position: relative;
+  z-index: 1;
+  margin-top: -60px;
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  padding: 5%;
+}
+.palette h1 {
+  font-family: "shrikhand";
+}
+
+.entrees, .desserts, .plats {
+  margin-top: 40px;
+}
+.entrees h2, .desserts h2, .plats h2 {
+  font-weight: 100;
+}
+
+.command__button {
+  display: flex;
+  height: auto;
+  padding: 10% 0;
+}
+.command__button button {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 3px 4px rgba(128, 128, 128, 0.2);
+  position: relative;
+}
+.header a {
+  position: absolute;
+  margin: 30px 40px;
+  color: black;
+}
+.header__back_arrow_hidden {
+  display: none;
+}
+.header__back_arrow {
+  display: initial;
+}
+.header__logo {
+  display: flex;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.footer {
+  height: auto;
+  background-color: #343434;
+  padding-bottom: 10%;
+}
+.footer h4 {
+  color: #fff;
+  font-family: "shrikhand";
+  font-weight: normal;
+  margin: 0;
+  padding: 5%;
+  font-size: 1.2rem;
+}
+.footer ul {
+  list-style: none;
+  padding: 0 4%;
+  margin: 0;
+}
+.footer li {
+  color: #fff;
+  padding: 1%;
+}
+.footer i {
+  margin-right: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  background-color: #99E2D0;
+  height: 4px;
+  border: none;
+  width: 50px;
+  margin: 0;
+  margin-top: -15px;
+}
+
+.btn {
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  border-radius: 40px;
+  width: 50%;
+  height: 50px;
+  color: #fff;
+  border: 0;
+  box-shadow: 1px 5px 7px #c7c7c7;
+  margin-bottom: 5%;
+}
+
+.working i {
+  position: absolute;
+  margin: 34px 250px 0 0;
+  opacity: 50%;
+}
+.working p {
+  margin: auto;
+}
+.working__button {
+  display: flex;
+  width: 95%;
+  height: 70px;
+  justify-content: center;
+  margin: 5% auto;
+  background-color: #fafafa;
+  box-shadow: 3px 5px 7px #e0e0e0;
+  border-radius: 20px;
+}
+.working__button__number {
+  background-color: #9356DC;
+  color: #fff;
+  width: 27px;
+  height: 27px;
+  border-radius: 40px;
+  margin: 22px 0 0 -10px;
+}
+.working__button p {
+  padding: 5px 9px;
+}
+
+.card {
+  width: 95%;
+  height: auto;
+  margin: 5% auto;
+  box-shadow: 3px 5px 7px #e0e0e0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card h3 {
+  margin: 0;
+}
+.card a {
+  color: black;
+}
+.card__infos {
+  display: flex;
+  margin: 0;
+  background-color: #fff;
+  padding: 3% 5%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  justify-content: space-between;
+}
+.card__infos__icon {
+  margin: auto 4%;
+}
+
+.meal__card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 3px 5px 7px #e0e0e0;
+  border-radius: 25px;
+  padding: 0 3%;
+  margin: 15px auto;
+}
+.meal__card__info {
+  height: auto;
+  margin: auto 0;
+}
+.meal__card__info h3 {
+  margin: 0;
+  padding: 3% 0;
+}
+.meal__card__info p {
+  margin: 0;
+  padding: 3% 0;
+  font-weight: 100;
+}
+.meal__card__price {
+  height: auto;
+  align-content: flex-end;
+  padding-top: 35px;
+}
+
+/*# sourceMappingURL=Style.css.map */
