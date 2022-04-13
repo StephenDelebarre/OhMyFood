@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 3px 4px rgba(128, 128, 128, 0.2);
+    position: relative;
+    a{
+        position: absolute;
+        margin: 30px 40px;
+        color: black;
+    }
+    &__back_arrow_hidden{
+       display: none;
+    }
+    &__back_arrow{
+        display: initial;
+    }
+    &__logo{
+        display: flex;
+        width: 200px;
+        margin: 20px auto;
+    }
+}

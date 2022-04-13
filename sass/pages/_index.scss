@@ -1,0 +1,43 @@
+.location {
+    display: flex;
+    height: auto;
+    background-color: $color-grey;
+    justify-content: center;
+    i{
+        margin: 28px 180px auto auto;
+        position: absolute;
+    }
+    p{
+        font-size: 1.2rem;
+        color: lighten(black, 30%);
+    }
+}
+
+.explore {
+    background-color: lighten($color-grey, 3%);
+    text-align: center;
+    padding: 5%;
+    height: auto;
+
+    h1{
+        font-size: 2rem;
+        padding: 0 5%;
+    }
+
+    p{
+        padding: 0 5%;
+        font-size: 1.3rem;
+        opacity: 50%;
+    }
+}
+
+.working {
+    padding: $section-padding;
+}
+
+.restaurants {
+    padding: $section-padding;
+    background-color: lighten($color-grey, 3%);
+    height: auto;
+    padding-bottom: 10%;
+}
