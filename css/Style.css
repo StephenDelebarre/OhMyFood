@@ -224,6 +224,13 @@ hr {
 .working__button p {
   padding: 5px 9px;
 }
+.working__button:hover {
+  background-color: #f2eafb;
+}
+.working__button:hover i {
+  color: #9356DC;
+  opacity: 1;
+}
 
 .card {
   width: 95%;
@@ -239,6 +246,14 @@ hr {
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+.card .thumbnail_new {
+  width: fit-content;
+  padding: 2% 3%;
+  color: #278870;
+  background-color: #ade8d9;
+  position: absolute;
+  margin: -185px 60%;
 }
 .card h3 {
   margin: 0;
