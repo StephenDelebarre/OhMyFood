@@ -1,8 +1,9 @@
 @import "./utils/variables";
 @import "./utils/mixin";
+@import "./utils/animations";
 
 @import "./pages/index";
-@import "./pages/la_palette_du_gout";
+@import "./pages/restaurants";
 
 @import "./layouts/header";
 @import "./layouts/footer";

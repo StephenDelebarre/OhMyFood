@@ -20,6 +20,9 @@
     li{
         color: $color-white;
         padding: 1%;
+        &:hover{
+            text-decoration: underline 2px;
+        }
     }
 
     i{

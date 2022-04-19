@@ -1,5 +1,9 @@
 .btn {
-    @include btn
+    @include btn;
+    &:hover{
+        filter: brightness(1.1);
+        box-shadow: 3px 8px 7px darken($color-grey, 30%), -3px 8px 7px darken($color-grey, 30%);
+    }
 }
 
 .working{
@@ -21,7 +25,7 @@
     justify-content: center;
     margin: 5% auto;
     background-color: lighten($color-grey, 5%);
-    box-shadow: 3px 5px 7px darken($color-grey, 5%);
+    box-shadow: 3px 5px 7px darken($color-grey, 5%), -3px 5px 7px darken($color-grey, 5%);
     border-radius: 20px;
         &__number{
             background-color: $color-primary;
