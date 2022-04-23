@@ -4,8 +4,10 @@
   "description": "P3 OC",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss:./css/Style.css"
+    "sass": "sass --watch sass/main.scss:./css/Style.css",
+    "prefix": "postcss ./css/Style.css --use autoprefixer -d ./css/Prefixed/"
   },
   "author": "Delebarre Stephen",
-  "license": "ISC"
+  "license": "ISC",
+  "broserlist": "last 4 versions"
 }

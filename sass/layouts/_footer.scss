@@ -20,6 +20,7 @@
     li{
         color: $color-white;
         padding: 1%;
+        width: fit-content;
         &:hover{
             text-decoration: underline 2px;
         }
@@ -27,5 +28,9 @@
 
     i{
         margin-right: 10px;
+    }
+
+    a {
+        color: $color-white;
     }
 }

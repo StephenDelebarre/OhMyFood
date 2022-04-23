@@ -6,6 +6,30 @@
     scale: 1;
   }
 }
+@keyframes meals-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes check-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  33% {
+    transform: rotate(120deg);
+  }
+  66% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .location {
   display: flex;
   height: auto;
@@ -95,9 +119,22 @@
 
 .entrees, .desserts, .plats {
   margin-top: 40px;
+  animation: 2s meals-appearance both;
 }
 .entrees h2, .desserts h2, .plats h2 {
   font-weight: 100;
+}
+.entrees:nth-child(2), .desserts:nth-child(2), .plats:nth-child(2) {
+  opacity: 0;
+  animation-delay: 200ms;
+}
+.entrees:nth-child(3), .desserts:nth-child(3), .plats:nth-child(3) {
+  opacity: 0;
+  animation-delay: 600ms;
+}
+.entrees:nth-child(4), .desserts:nth-child(4), .plats:nth-child(4) {
+  opacity: 0;
+  animation-delay: 1s;
 }
 
 .command__button {
@@ -154,12 +191,16 @@
 .footer li {
   color: #fff;
   padding: 1%;
+  width: fit-content;
 }
 .footer li:hover {
   text-decoration: underline 2px;
 }
 .footer i {
   margin-right: 10px;
+}
+.footer a {
+  color: #fff;
 }
 
 * {
@@ -291,32 +332,61 @@ hr {
 
 .meal__card {
   width: 100%;
-  height: auto;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 3px 5px 7px #e0e0e0, -3px 5px 7px #e0e0e0;
   border-radius: 25px;
-  padding: 0 3%;
   margin: 15px auto;
+  overflow: hidden;
+  animation: 2s meals-appearance;
 }
 .meal__card__info {
+  width: 100%;
   height: auto;
   margin: auto 0;
+  display: block;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .meal__card__info h3 {
   margin: 0;
-  padding: 3% 0;
+  padding: 1% 0 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .meal__card__info p {
   margin: 0;
-  padding: 3% 0;
+  padding: 1% 0 0 10px;
   font-weight: 100;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .meal__card__price {
   height: auto;
-  align-content: flex-end;
-  padding-top: 35px;
+  padding: 30px 10px;
+}
+.meal__card__icon {
+  width: 0;
+  height: 100%;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform-origin: right;
+  transition: 500ms ease;
+}
+.meal__card .check {
+  padding: 40px 30px;
+  color: #fff;
+}
+.meal__card:hover .meal__card__icon {
+  width: 100px;
+}
+.meal__card:hover .check {
+  animation: linear 400ms check-rotation;
 }
 
 /*# sourceMappingURL=Style.css.map */
