@@ -40,6 +40,8 @@
         justify-content: space-between;
     }
 
+    /* Bouton j'aime et son animation */
+
     .full_heart{
         position: absolute;
         padding: 10px;
@@ -119,10 +121,12 @@
         color: $color-white;
     }
 
+    /* Animation d'apparition du check */
     &:hover .meal__card__icon{
         width: 100px;
     }
 
+    /* Animation de rotation du check */
     &:hover .check{
         animation: linear 400ms check-rotation;
     }

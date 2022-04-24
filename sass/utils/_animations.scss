@@ -37,3 +37,36 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes loader-page{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes loader-hr{
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+@keyframes loader-text{
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+

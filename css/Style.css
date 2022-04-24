@@ -30,6 +30,31 @@
     transform: rotate(360deg);
   }
 }
+@keyframes loader-page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader-hr {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 300px;
+  }
+}
+@keyframes loader-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .location {
   display: flex;
   height: auto;
@@ -70,6 +95,41 @@
   background-color: whitesmoke;
   height: auto;
   padding-bottom: 10%;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #343434;
+  position: fixed;
+  top: 0;
+  animation: loader-page 1s both;
+  animation-delay: 3s;
+}
+.loader__center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.loader__center__text {
+  display: flex;
+  margin: auto;
+  animation: loader-text 2s ease-in-out;
+}
+.loader p {
+  font-size: 3rem;
+  font-family: "shrikhand";
+  color: #fff;
+}
+.loader hr {
+  width: 0;
+  margin: auto;
+  margin-top: -430px;
+  background: linear-gradient(110deg, #99E2D0, #FF79DA, #9356DC);
+  animation: loader-hr 2s ease-in-out both;
+  animation-delay: 1s;
 }
 
 .img_restaurant {
@@ -146,6 +206,7 @@
   margin: auto;
 }
 
+/* Header */
 .header {
   display: flex;
   width: 100%;
@@ -170,6 +231,7 @@
   margin: 20px auto;
 }
 
+/* footer */
 .footer {
   height: auto;
   background-color: #343434;
@@ -280,6 +342,7 @@ hr {
   box-shadow: 3px 5px 7px #e0e0e0, -3px 5px 7px #e0e0e0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  /* Bouton j'aime et son animation */
 }
 .card img {
   width: 100%;
@@ -341,6 +404,8 @@ hr {
   margin: 15px auto;
   overflow: hidden;
   animation: 2s meals-appearance;
+  /* Animation d'apparition du check */
+  /* Animation de rotation du check */
 }
 .meal__card__info {
   width: 100%;
