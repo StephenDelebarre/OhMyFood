@@ -1,3 +1,7 @@
+/* variables de couleur */
+/* variables de padding */
+/* variable border radius */
+/* Variable responsive */
 @keyframes heart-grow {
   from {
     scale: 0;
@@ -75,6 +79,7 @@
   text-align: center;
   padding: 5%;
   height: auto;
+  position: relative;
 }
 .explore h1 {
   font-size: 2rem;
@@ -89,12 +94,34 @@
 .working {
   padding: 5%;
 }
+@media only screen and (min-width: 992px) {
+  .working {
+    padding: 2%;
+  }
+}
 
 .restaurants {
   padding: 5%;
   background-color: whitesmoke;
   height: auto;
   padding-bottom: 10%;
+}
+@media only screen and (min-width: 768px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants h2 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .restaurants {
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .loader {
@@ -108,36 +135,39 @@
   animation-delay: 3s;
 }
 .loader__center {
+  position: absolute;
+  top: 45%;
   width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: row;
-}
-.loader__center__text {
-  display: flex;
-  margin: auto;
-  animation: loader-text 2s ease-in-out;
+  flex-direction: column;
 }
 .loader p {
+  margin: auto;
   font-size: 3rem;
   font-family: "shrikhand";
   color: #fff;
+  animation: loader-text 2s ease-in-out;
 }
 .loader hr {
   width: 0;
   margin: auto;
-  margin-top: -430px;
   background: linear-gradient(110deg, #99E2D0, #FF79DA, #9356DC);
   animation: loader-hr 2s ease-in-out both;
   animation-delay: 1s;
 }
 
 .img_restaurant {
-  position: relative;
+  width: 100%;
 }
 .img_restaurant img {
-  position: relative;
   width: 100%;
+  max-height: 18em;
+  object-fit: cover;
+}
+@media only screen and (min-width: 992px) {
+  .img_restaurant img {
+    max-height: 30em;
+  }
 }
 
 .restaurant {
@@ -158,31 +188,40 @@
   display: flex;
   justify-content: space-between;
 }
-.restaurant__header__icon .full_heart {
+.restaurant .full_heart {
   position: absolute;
   padding: 10px;
   margin: 30px -50px;
   opacity: 0;
 }
-.restaurant__header__icon .full_heart:hover {
+.restaurant .full_heart:hover {
   color: transparent;
   background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
   background-clip: text;
   opacity: 1;
   animation: 0.5s heart-grow;
 }
-.restaurant__header__icon .empty_heart {
+.restaurant .empty_heart {
   position: absolute;
   padding: 10px;
   margin: 30px -50px;
 }
 
 .entrees, .desserts, .plats {
+  width: 100%;
   margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   animation: 2s meals-appearance both;
 }
 .entrees h2, .desserts h2, .plats h2 {
   font-weight: 100;
+  width: 100%;
+}
+.entrees .hr__div, .desserts .hr__div, .plats .hr__div {
+  width: 100%;
 }
 .entrees:nth-child(2), .desserts:nth-child(2), .plats:nth-child(2) {
   opacity: 0;
@@ -196,14 +235,27 @@
   opacity: 0;
   animation-delay: 1s;
 }
+@media only screen and (min-width: 992px) {
+  .entrees .meal__card, .desserts .meal__card, .plats .meal__card {
+    width: 31%;
+  }
+  .entrees hr, .desserts hr, .plats hr {
+    margin-bottom: 20px;
+  }
+}
 
 .command__button {
   display: flex;
   height: auto;
-  padding: 10% 0;
+  padding: 10% 0 10% 0;
 }
 .command__button button {
   margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  .command__button {
+    padding: 3% 0 0 0;
+  }
 }
 
 /* Header */
@@ -264,10 +316,31 @@
 .footer a {
   color: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2%;
+  }
+  .footer h4 {
+    padding: 2%;
+    font-size: 2rem;
+  }
+  .footer ul {
+    width: 100%;
+  }
+  .footer li {
+    margin: auto;
+  }
+}
 
 * {
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -284,14 +357,12 @@ hr {
 }
 
 .btn {
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
-  border-radius: 40px;
-  width: 50%;
+  width: 200px;
   height: 50px;
-  color: #fff;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   border: 0;
-  box-shadow: 1px 5px 7px #c7c7c7, -1px 5px 7px #c7c7c7;
-  margin-bottom: 5%;
+  border-radius: 40px;
+  color: #fff;
 }
 .btn:hover {
   filter: brightness(1.1);
@@ -302,6 +373,9 @@ hr {
   position: absolute;
   margin: 34px 250px 0 0;
   opacity: 50%;
+}
+.working h2 {
+  width: 100%;
 }
 .working p {
   margin: auto;
@@ -334,6 +408,23 @@ hr {
   color: #9356DC;
   opacity: 1;
 }
+@media only screen and (min-width: 992px) {
+  .working {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .working h2 {
+    margin: 0;
+    width: 100%;
+  }
+  .working i {
+    margin: 34px 205px 0 0;
+  }
+  .working__button {
+    margin: 30px auto;
+    width: 30%;
+  }
+}
 
 .card {
   width: 95%;
@@ -342,6 +433,7 @@ hr {
   box-shadow: 3px 5px 7px #e0e0e0, -3px 5px 7px #e0e0e0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  position: relative;
   /* Bouton j'aime et son animation */
 }
 .card img {
@@ -357,7 +449,8 @@ hr {
   color: #278870;
   background-color: #ade8d9;
   position: absolute;
-  margin: -185px 60%;
+  top: 0;
+  left: 70%;
 }
 .card h3 {
   margin: 0;
@@ -392,7 +485,22 @@ hr {
   padding: 10px;
   margin: 20px -40px;
 }
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 35vw;
+  }
+  .card .thumbnail_new {
+    left: 65%;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .card {
+    width: 400px;
+    margin: 20px;
+  }
+}
 
+/* Carte des menus */
 .meal__card {
   width: 100%;
   height: 80px;
@@ -419,13 +527,13 @@ hr {
 }
 .meal__card__info h3 {
   margin: 0;
-  padding: 1% 0 0 10px;
+  padding: 0 0 0 4%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .meal__card__info p {
   margin: 0;
-  padding: 1% 0 0 10px;
+  padding: 0 0 0 4%;
   font-weight: 100;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -433,6 +541,10 @@ hr {
 .meal__card__price {
   height: auto;
   padding: 30px 10px;
+}
+.meal__card .check {
+  padding: 40px 30px;
+  color: #fff;
 }
 .meal__card__icon {
   width: 0;
@@ -442,10 +554,6 @@ hr {
   border-bottom-right-radius: 20px;
   transform-origin: right;
   transition: 500ms ease;
-}
-.meal__card .check {
-  padding: 40px 30px;
-  color: #fff;
 }
 .meal__card:hover .meal__card__icon {
   width: 100px;

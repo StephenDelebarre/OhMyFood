@@ -1,8 +1,20 @@
+/* variables de couleur */
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-grey: #ededed;
 $color-white: #fff;
 
+/* variables de padding */
+
 $section-padding: 5%;
+
+/* variable border radius */ 
+
 $border-radius-card: 20px;
+
+/* Variable responsive */ 
+
+$tablet-screen: "only screen and (min-width: 768px)";
+$desktop-screen: "only screen and (min-width: 992px)";

@@ -1,8 +1,15 @@
 .img_restaurant{
-    position: relative;
+    width: 100%;
     img{
-        position: relative;
         width: 100%;
+        max-height: 18em;
+        object-fit: cover;
+    }
+
+    @media #{$desktop-screen} {
+        img{
+            max-height: 30em;
+        }
     }
 }
 
@@ -23,36 +30,46 @@
     &__header{
         display: flex;
         justify-content: space-between;
-        &__icon{
-            .full_heart{
-                position: absolute;
-                padding: 10px;
-                margin: 30px -50px;
-                opacity: 0;
-                &:hover{
-                    color: transparent;
-                    background-image: linear-gradient(to bottom left, $color-primary, $color-secondary);
-                    background-clip: text;
-                    opacity: 1;
-                    animation: 0.5s heart-grow;
-                }
-            }
-        
-            .empty_heart{
-                position: absolute;
-                padding: 10px;
-                margin: 30px -50px;
-            }
+    }
+    .full_heart{
+        position: absolute;
+        padding: 10px;
+        margin: 30px -50px;
+        opacity: 0;
+        &:hover{
+            color: transparent;
+            background-image: linear-gradient(to bottom left, $color-primary, $color-secondary);
+            background-clip: text;
+            opacity: 1;
+            animation: 0.5s heart-grow;
         }
     }
+
+    .empty_heart{
+        position: absolute;
+        padding: 10px;
+        margin: 30px -50px;
+    }
+
+
 }
 
 
 .entrees{
+    width: 100%;
     margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
     h2{
         font-weight: 100;
+        width: 100%;
+    }
+
+    .hr__div{
+        width: 100%;
     }
 
     animation: 2s meals-appearance both;
@@ -71,6 +88,16 @@
         opacity: 0;
         animation-delay: 1s;
     }
+
+    @media #{$desktop-screen} {
+        .meal__card{
+            width: 31%;
+        }
+
+        hr{
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .plats{
@@ -84,8 +111,12 @@
 .command__button{
     display: flex;
     height: auto;
-    padding: 10% 0;
+    padding: 10% 0 10% 0;
     button{
         margin: auto;
+    }
+
+    @media #{$tablet-screen} {
+        padding: 3% 0 0 0;
     }
 }

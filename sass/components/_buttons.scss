@@ -1,5 +1,10 @@
 .btn {
-    @include btn;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(175deg, $color-secondary, $color-primary);
+    border: 0;
+    border-radius: 40px;
+    color: $color-white;
     &:hover{
         filter: brightness(1.1);
         box-shadow: 3px 8px 7px darken($color-grey, 30%), -3px 8px 7px darken($color-grey, 30%);
@@ -12,6 +17,10 @@
         position: absolute;
         margin: 34px 250px 0 0 ;
         opacity: 50%;
+    }
+
+    h2{
+        width: 100%;
     }
 
     p{
@@ -46,6 +55,25 @@
         &:hover i{
             color: $color-primary;
             opacity: 1;
+        }
+    }
+
+    @media #{$desktop-screen} {
+        display: flex;
+        flex-wrap: wrap;
+        
+        h2{
+            margin: 0;
+            width: 100%;
+        }
+
+        i{
+            margin: 34px 205px 0 0 ;
+        }
+
+        &__button{
+            margin: 30px auto;
+            width: 30%;
         }
     }
 }
