@@ -5,6 +5,7 @@
     border: 0;
     border-radius: 40px;
     color: $color-white;
+    box-shadow: 1px 5px 7px darken($color-grey, 15%), -1px 5px 7px darken($color-grey, 15%);
     &:hover{
         filter: brightness(1.1);
         box-shadow: 3px 8px 7px darken($color-grey, 30%), -3px 8px 7px darken($color-grey, 30%);
@@ -15,7 +16,7 @@
 
     i{
         position: absolute;
-        margin: 34px 250px 0 0 ;
+        margin: 34px 210px 0 0 ;
         opacity: 50%;
     }
 
