@@ -1,9 +1,9 @@
 @keyframes heart-grow {
-  from {
-    scale: 0;
+  0% {
+    transform: scale(0);
   }
-  to {
-    scale: 1;
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes meals-appearance {
