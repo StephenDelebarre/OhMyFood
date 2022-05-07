@@ -184,16 +184,20 @@
   display: flex;
   justify-content: space-between;
 }
+.restaurant__header__name {
+  width: 80%;
+}
 .restaurant .full_heart {
   position: absolute;
   padding: 10px;
   margin: 30px -50px;
   opacity: 0;
-}
-.restaurant .full_heart:hover {
   color: transparent;
   background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
+}
+.restaurant .full_heart:hover {
   opacity: 1;
   animation: 0.5s heart-grow;
 }
@@ -469,11 +473,12 @@ hr {
   padding: 10px;
   margin: 20px -40px;
   opacity: 0;
-}
-.card .full_heart:hover {
   color: transparent;
   background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
+}
+.card .full_heart:hover {
   opacity: 1;
   animation: 0.5s heart-grow;
 }

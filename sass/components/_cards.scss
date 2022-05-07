@@ -49,11 +49,11 @@
         padding: 10px;
         margin: 20px -40px;
         opacity: 0;
-
+        color: transparent;
+        background-image: linear-gradient(to bottom left, $color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
         &:hover{
-            color: transparent;
-            background-image: linear-gradient(to bottom left, $color-primary, $color-secondary);
-            background-clip: text;
             opacity: 1;
             animation: 0.5s heart-grow;
         }
